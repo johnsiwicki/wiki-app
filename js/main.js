@@ -20,7 +20,3 @@ $.getJSON(wikiAPI, function (data) {
     	closeIt(1, false);
 });
  
-
-$("#res").on("swipe", function(event) {
-    closeIt(1, false);
-});
