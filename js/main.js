@@ -1,12 +1,24 @@
-$.getJSON("http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extracts&explaintext&exintro=&format=json&callback=?", function (data) {
+// Set the api variable
+var wikiAPI = "http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extracts&explaintext&exintro=&format=json&callback=?";
+
+$(document).ready(closeIt);
+
+function closeIt() {
+$.getJSON(wikiAPI, function (data) {
     $.each(data.query.pages, function(k, v) {
         $.getJSON('http://en.wikipedia.org/w/api.php?action=query&prop=info&pageids='+v.pageid+'&inprop=url&format=json&callback=?', function(url) {
             $.each(url.query.pages, function(key, page) {
-                console.log(page)
-                $('#res').append('<h1><a href="'+page.fullurl+'" target="_blank">'+page.title+'</a></h1><div>'+v.extract+'</div>')
+                $('#res').html('<h1><a href="'+page.fullurl+'" target="_blank">'+page.title+'</a></h1><div>'+v.extract+'</div>')
             });
         });
     });
-     
+});    //end json
+}
+
+ 
+ $(".random").click(function() {
+    	closeIt(1, false);
 });
+ 
+
  
