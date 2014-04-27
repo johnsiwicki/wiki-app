@@ -3,47 +3,31 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wikipedia API Demo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-
-
-
-
-
-
-
-        <div class="container">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wikipedia API Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-
-                  <h1>Random Wikipedia Article</h1>
-
-                    <div id="res"></div>
-
-
-                    <button class="btn random" >Random Article</button>
-
-                <h1>Search Wikipedia</h1>
-                <form role="form">
-                    <input type="text" class="form-control" placeholder="Search">
-                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <div class="jumbotron">
+                    <div class="container">
+                        <div id="res" ></div>
+                        <button class="btn btn-warning random" >Randomize Article</button>
+                    </div>
+                </div>
+                
             </div>
-        </div>   
-
-
-
-
+        </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
